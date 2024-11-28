@@ -94,36 +94,6 @@ def mostrarUsuarios():
 resultado_json = mostrarUsuarios()
 print(resultado_json)  # Imprimir el resultado en JSON
 
-# @app.route('/api/users', methods=['GET'])
-# def obtener_usuarios():
-#     api_key = request.headers.get('x-api-key') or request.args.get('api_key')
-
-#     if not validarApiKey(api_key):
-#         return jsonify({"error": "API Key no válida"}), 403
-
-#     db = conectarDB()
-    
-#     if not db:
-#         return jsonify({"error": "Error de conexión a la base de datos"}), 500
-
-#     cursor = db.cursor(dictionary=True)
-    
-#     try:
-#         consulta = "SELECT * FROM users_key"
-#         cursor.execute(consulta)
-#         resultado = cursor.fetchall()
-        
-#         # Devolver los resultados en formato JSON
-#         return jsonify(resultado), 200
-
-#     except mysql.Error as error:
-#         print(f"Error en consulta: {error}")
-#         return jsonify({"error": "Error en consulta"}), 500
-    
-#     finally:
-#         cursor.close()
-#         db.close()
-
 if __name__ == '__main__':
     app.run(port=5001, debug=True)
 

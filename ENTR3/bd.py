@@ -1,6 +1,7 @@
 # CONEXIÓN BASE DE DATOS
 
 import mysql.connector as mysql
+#from sqlalchemy import create_engine
 
 def conectarDB():
     try:
